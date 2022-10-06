@@ -1,4 +1,5 @@
 import 'package:junit/custom_reflectable.dart';
+import 'package:junit/test_result.dart';
 
 @aCustomReflectable
 abstract class TestCase {
@@ -8,7 +9,7 @@ abstract class TestCase {
 
   void setUp();
 
-  String run() {
+  TestResult run() {
     setUp();
 
     var instanceMirror = aCustomReflectable.reflect(this);
@@ -17,10 +18,8 @@ abstract class TestCase {
 
     tearDown();
 
-    return summary();
+    return TestResult();
   }
 
   void tearDown();
-
-  String summary();
 }

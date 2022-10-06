@@ -52,7 +52,6 @@ final _data = <r.Reflectable, r.ReflectorData>{
               r'setUp': 0,
               r'testMethod': 0,
               r'tearDown': 0,
-              r'summary': 0,
               r'logsAreEqual': 1
             }),
         r.NonGenericClassMirrorImpl(
@@ -98,7 +97,6 @@ final _data = <r.Reflectable, r.ReflectorData>{
         r'setUp': (dynamic instance) => instance.setUp,
         r'testMethod': (dynamic instance) => instance.testMethod,
         r'tearDown': (dynamic instance) => instance.tearDown,
-        r'summary': (dynamic instance) => instance.summary,
         r'logsAreEqual': (dynamic instance) => instance.logsAreEqual
       },
       {r'name=': (dynamic instance, value) => instance.name = value},
