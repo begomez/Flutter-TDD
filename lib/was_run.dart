@@ -10,6 +10,7 @@ class WasRun extends TestCase {
 
   @override
   void setUp() {
+    wasRun = false;
     wasSetUp = true;
   }
 
