@@ -15,4 +15,6 @@ abstract class TestCase {
 
     instanceMirror.invoke(name, []);
   }
+
+  void tearDown();
 }
