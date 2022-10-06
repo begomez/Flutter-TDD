@@ -30,5 +30,5 @@ void testSetUp() {
 
   test.run();
 
-  assert(test.log.contains("setUp"));
+  assert(test.logContains(target: "setUp"));
 }
