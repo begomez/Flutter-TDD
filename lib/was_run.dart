@@ -1,3 +1,14 @@
+import 'package:reflectable/reflectable.dart';
+
+/// Mirroring class to apply reflection on other classes
+class CustomReflectable extends Reflectable {
+  const CustomReflectable() : super(invokingCapability);
+}
+
+@aCustomReflectable
+const aCustomReflectable = CustomReflectable();
+
+@aCustomReflectable
 class WasRun {
   bool wasRun;
   String name;
@@ -9,6 +20,8 @@ class WasRun {
   }
 
   void run() {
-    testMethod();
+    var instanceMirror = aCustomReflectable.reflect(this);
+
+    instanceMirror.invoke(name, []);
   }
 }
