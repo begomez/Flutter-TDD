@@ -24,8 +24,6 @@ void launchTests() {
 void testSummary() {
   final test = WasRun("testMethod");
 
-  test.run();
-
   assert(test.summary() == "1 run, 0 failed");
 }
 

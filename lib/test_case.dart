@@ -20,5 +20,5 @@ abstract class TestCase {
 
   void tearDown();
 
-  void summary();
+  String summary();
 }
