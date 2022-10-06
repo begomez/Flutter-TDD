@@ -21,6 +21,8 @@ class WasRun extends TestCase {
     _log.add("tearDown");
   }
 
+  String summary() => "1 run, 0 failed";
+
   bool logsAreEqual({required List<String> target}) {
     assert(_log.length == target.length);
 
