@@ -13,6 +13,7 @@ void main() {
 void launchTests() {
   testMethodInvocation();
   testSetUp();
+  testTearDown();
 }
 
 void testMethodInvocation() {
@@ -29,4 +30,12 @@ void testSetUp() {
   test.setUp();
 
   assert(test.logsAreEqual(target: ["setUp"]));
+}
+
+void testTearDown() {
+  final test = WasRun("testMethod");
+
+  test.tearDown();
+
+  assert(test.logsAreEqual(target: ["tearDown"]));
 }
