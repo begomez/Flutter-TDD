@@ -1,5 +1,6 @@
 // ignore_for_file: avoid_print
 
+import 'package:junit/test_result.dart';
 import 'package:junit/was_run.dart';
 
 import 'main_test.reflectable.dart';
@@ -19,14 +20,7 @@ void launchTests() {
   testSetUp();
   testTearDown();
   testSummary();
-}
-
-void testSummary() {
-  final test = WasRun("testMethod");
-
-  final result = test.run();
-
-  assert(result.summary() == "1 run, 0 failed");
+  testResult();
 }
 
 void testMethodInvocation() {
@@ -51,4 +45,21 @@ void testTearDown() {
   test.tearDown();
 
   assert(test.logsAreEqual(target: [tearDownLabel]));
+}
+
+void testSummary() {
+  final test = WasRun("testMethod");
+
+  final result = test.run();
+
+  assert(result.summary() == "1 run, 0 failed");
+}
+
+void testResult() {
+  final result = TestResult();
+
+  result.testStarted();
+  result.testFailed();
+
+  assert(result.summary() == "1 run, 1 failed");
 }
