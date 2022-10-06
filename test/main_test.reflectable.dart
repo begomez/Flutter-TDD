@@ -3,7 +3,8 @@
 // @dart = 2.12
 
 import 'dart:core';
-import 'package:junit/was_run.dart' as prefix0;
+import 'package:junit/custom_reflectable.dart' as prefix0;
+import 'package:junit/was_run.dart' as prefix1;
 
 // ignore_for_file: camel_case_types
 // ignore_for_file: implementation_imports
@@ -35,7 +36,7 @@ final _data = <r.Reflectable, r.ReflectorData>{
             {},
             {
               r'': (bool b) => (name, {wasRun = false}) =>
-                  b ? prefix0.WasRun(name, wasRun: wasRun) : null
+                  b ? prefix1.WasRun(name, wasRun: wasRun) : null
             },
             -1,
             -1,
@@ -57,7 +58,7 @@ final _data = <r.Reflectable, r.ReflectorData>{
       ],
       null,
       null,
-      <Type>[prefix0.WasRun],
+      <Type>[prefix1.WasRun],
       1,
       {
         r'==': (dynamic instance) => (x) => instance == x,
