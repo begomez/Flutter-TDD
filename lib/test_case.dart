@@ -8,7 +8,7 @@ abstract class TestCase {
 
   void setUp();
 
-  void run() {
+  String run() {
     setUp();
 
     var instanceMirror = aCustomReflectable.reflect(this);
@@ -16,6 +16,8 @@ abstract class TestCase {
     instanceMirror.invoke(name, []);
 
     tearDown();
+
+    return summary();
   }
 
   void tearDown();
