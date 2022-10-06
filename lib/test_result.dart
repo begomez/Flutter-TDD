@@ -4,4 +4,6 @@ class TestResult {
   TestResult({this.runCount = 1});
 
   String summary() => "$runCount run, 0 failed";
+
+  void testStarted() => runCount++;
 }
