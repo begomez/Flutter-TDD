@@ -19,4 +19,6 @@ abstract class TestCase {
   }
 
   void tearDown();
+
+  void summary();
 }
