@@ -10,6 +10,10 @@ abstract class TestCase {
   void setUp();
 
   TestResult run() {
+    TestResult result = TestResult();
+
+    result.testStarted();
+
     setUp();
 
     var instanceMirror = aCustomReflectable.reflect(this);
@@ -18,7 +22,7 @@ abstract class TestCase {
 
     tearDown();
 
-    return TestResult();
+    return result;
   }
 
   void tearDown();
