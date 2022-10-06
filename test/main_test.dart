@@ -28,6 +28,8 @@ void testMethodInvocation() {
 void testSetUp() {
   final test = WasRun("testMethod");
 
+  assert(!test.wasSetUp);
+
   test.run();
 
   assert(test.wasSetUp);
