@@ -22,7 +22,7 @@ void testMethodInvocation() {
 
   test.run();
 
-  assert(test.wasRun);
+  assert(test.logContains(target: ["setUp", "run"]));
 }
 
 void testSetUp() {
