@@ -9,9 +9,9 @@ void main() {
 
   final test = WasRun("testMethod");
 
-  print(test.wasRun);
+  assert(!test.wasRun);
 
   test.run();
 
-  print(test.wasRun);
+  assert(test.wasRun);
 }
