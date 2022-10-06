@@ -4,6 +4,7 @@
 
 import 'dart:core';
 import 'package:junit/custom_reflectable.dart' as prefix0;
+import 'package:junit/test_case.dart' as prefix2;
 import 'package:junit/was_run.dart' as prefix1;
 
 // ignore_for_file: camel_case_types
@@ -48,32 +49,59 @@ final _data = <r.Reflectable, r.ReflectorData>{
               r'noSuchMethod': 1,
               r'hashCode': 0,
               r'runtimeType': 0,
-              r'testMethod': 0,
               r'run': 0,
+              r'name': 0,
+              r'name=': 1,
+              r'testMethod': 0,
               r'wasRun': 0,
-              r'wasRun=': 1,
+              r'wasRun=': 1
+            }),
+        r.NonGenericClassMirrorImpl(
+            r'TestCase',
+            r'.TestCase',
+            7,
+            1,
+            const prefix0.CustomReflectable(),
+            const <int>[-1],
+            null,
+            null,
+            -1,
+            {},
+            {},
+            {r'': (bool b) => (name) => b ? prefix2.TestCase(name) : null},
+            -1,
+            -1,
+            const <int>[-1],
+            null,
+            {
+              r'==': 1,
+              r'toString': 0,
+              r'noSuchMethod': 1,
+              r'hashCode': 0,
+              r'runtimeType': 0,
+              r'run': 0,
               r'name': 0,
               r'name=': 1
             })
       ],
       null,
       null,
-      <Type>[prefix1.WasRun],
-      1,
+      <Type>[prefix1.WasRun, prefix2.TestCase],
+      2,
       {
         r'==': (dynamic instance) => (x) => instance == x,
         r'toString': (dynamic instance) => instance.toString,
         r'noSuchMethod': (dynamic instance) => instance.noSuchMethod,
         r'hashCode': (dynamic instance) => instance.hashCode,
         r'runtimeType': (dynamic instance) => instance.runtimeType,
-        r'testMethod': (dynamic instance) => instance.testMethod,
         r'run': (dynamic instance) => instance.run,
-        r'wasRun': (dynamic instance) => instance.wasRun,
-        r'name': (dynamic instance) => instance.name
+        r'name': (dynamic instance) => instance.name,
+        r'testMethod': (dynamic instance) => instance.testMethod,
+        r'wasRun': (dynamic instance) => instance.wasRun
       },
       {
-        r'wasRun=': (dynamic instance, value) => instance.wasRun = value,
-        r'name=': (dynamic instance, value) => instance.name = value
+        r'name=': (dynamic instance, value) => instance.name = value,
+        r'wasRun=': (dynamic instance, value) => instance.wasRun = value
       },
       null,
       [

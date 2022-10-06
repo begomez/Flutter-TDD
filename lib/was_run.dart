@@ -4,17 +4,10 @@ import 'package:junit/test_case.dart';
 @aCustomReflectable
 class WasRun extends TestCase {
   bool wasRun;
-  String name;
 
-  WasRun(this.name, {this.wasRun = false});
+  WasRun(String name, {this.wasRun = false}) : super(name);
 
   void testMethod() {
     wasRun = true;
-  }
-
-  void run() {
-    var instanceMirror = aCustomReflectable.reflect(this);
-
-    instanceMirror.invoke(name, []);
   }
 }
