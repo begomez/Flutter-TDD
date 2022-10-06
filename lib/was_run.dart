@@ -1,3 +1,4 @@
+import 'package:junit/test_case.dart';
 import 'package:reflectable/reflectable.dart';
 
 /// Mirroring class to apply reflection on other classes
@@ -9,7 +10,7 @@ class CustomReflectable extends Reflectable {
 const aCustomReflectable = CustomReflectable();
 
 @aCustomReflectable
-class WasRun {
+class WasRun extends TestCase {
   bool wasRun;
   String name;
 
