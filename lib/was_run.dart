@@ -4,5 +4,7 @@ class WasRun {
 
   WasRun(this.name, {this.wasRun = false});
 
-  void testMethod() {}
+  void testMethod() {
+    wasRun = true;
+  }
 }
