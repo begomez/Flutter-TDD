@@ -36,8 +36,9 @@ final _data = <r.Reflectable, r.ReflectorData>{
             {},
             {},
             {
-              r'': (bool b) => (name, {wasRun = false}) =>
-                  b ? prefix1.WasRun(name, wasRun: wasRun) : null
+              r'': (bool b) => (name, {wasRun = false, wasSetUp = false}) => b
+                  ? prefix1.WasRun(name, wasRun: wasRun, wasSetUp: wasSetUp)
+                  : null
             },
             -1,
             -1,
@@ -52,14 +53,17 @@ final _data = <r.Reflectable, r.ReflectorData>{
               r'run': 0,
               r'name': 0,
               r'name=': 1,
+              r'setUp': 0,
               r'testMethod': 0,
               r'wasRun': 0,
-              r'wasRun=': 1
+              r'wasRun=': 1,
+              r'wasSetUp': 0,
+              r'wasSetUp=': 1
             }),
         r.NonGenericClassMirrorImpl(
             r'TestCase',
             r'.TestCase',
-            7,
+            519,
             1,
             const prefix0.CustomReflectable(),
             const <int>[-1],
@@ -68,7 +72,7 @@ final _data = <r.Reflectable, r.ReflectorData>{
             -1,
             {},
             {},
-            {r'': (bool b) => (name) => b ? prefix2.TestCase(name) : null},
+            {},
             -1,
             -1,
             const <int>[-1],
@@ -96,12 +100,15 @@ final _data = <r.Reflectable, r.ReflectorData>{
         r'runtimeType': (dynamic instance) => instance.runtimeType,
         r'run': (dynamic instance) => instance.run,
         r'name': (dynamic instance) => instance.name,
+        r'setUp': (dynamic instance) => instance.setUp,
         r'testMethod': (dynamic instance) => instance.testMethod,
-        r'wasRun': (dynamic instance) => instance.wasRun
+        r'wasRun': (dynamic instance) => instance.wasRun,
+        r'wasSetUp': (dynamic instance) => instance.wasSetUp
       },
       {
         r'name=': (dynamic instance, value) => instance.name = value,
-        r'wasRun=': (dynamic instance, value) => instance.wasRun = value
+        r'wasRun=': (dynamic instance, value) => instance.wasRun = value,
+        r'wasSetUp=': (dynamic instance, value) => instance.wasSetUp = value
       },
       null,
       [
@@ -110,7 +117,7 @@ final _data = <r.Reflectable, r.ReflectorData>{
         const [
           1,
           0,
-          const [#wasRun]
+          const [#wasRun, #wasSetUp]
         ]
       ])
 };

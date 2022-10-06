@@ -6,7 +6,12 @@ class WasRun extends TestCase {
   bool wasRun;
   bool wasSetUp;
 
-  WasRun(String name, {this.wasRun = false, this.wasSetUp = true}) : super(name);
+  WasRun(String name, {this.wasRun = false, this.wasSetUp = false}) : super(name);
+
+  @override
+  void setUp() {
+    wasSetUp = true;
+  }
 
   void testMethod() {
     wasRun = true;
