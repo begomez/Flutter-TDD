@@ -4,7 +4,7 @@ import 'package:junit/test_case.dart';
 @aCustomReflectable
 class WasRun extends TestCase {
   bool wasRun;
-  List<String> _log = [];
+  final List<String> _log = [];
 
   WasRun(String name, {this.wasRun = false}) : super(name);
 
@@ -15,8 +15,19 @@ class WasRun extends TestCase {
   }
 
   void testMethod() {
+    _log.add("testMethod");
     wasRun = true;
   }
 
-  bool logContains({required String target}) => _log.contains(target);
+  bool logsAreEqual({required List<String> target}) {
+    assert(_log.length == target.length);
+
+    for (var i = 0; i < _log.length; i++) {
+      if (target[i] != _log[i]) {
+        return false;
+      }
+    }
+
+    return true;
+  }
 }

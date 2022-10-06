@@ -44,20 +44,19 @@ final _data = <r.Reflectable, r.ReflectorData>{
             const <int>[-1],
             null,
             {
-              r'==': 1,
+              r'==': 2,
               r'toString': 0,
-              r'noSuchMethod': 1,
+              r'noSuchMethod': 2,
               r'hashCode': 0,
               r'runtimeType': 0,
               r'run': 0,
               r'name': 0,
-              r'name=': 1,
+              r'name=': 2,
               r'setUp': 0,
               r'testMethod': 0,
+              r'logsAreEqual': 1,
               r'wasRun': 0,
-              r'wasRun=': 1,
-              r'log': 0,
-              r'log=': 1
+              r'wasRun=': 2
             }),
         r.NonGenericClassMirrorImpl(
             r'TestCase',
@@ -77,14 +76,14 @@ final _data = <r.Reflectable, r.ReflectorData>{
             const <int>[-1],
             null,
             {
-              r'==': 1,
+              r'==': 2,
               r'toString': 0,
-              r'noSuchMethod': 1,
+              r'noSuchMethod': 2,
               r'hashCode': 0,
               r'runtimeType': 0,
               r'run': 0,
               r'name': 0,
-              r'name=': 1
+              r'name=': 2
             })
       ],
       null,
@@ -101,17 +100,21 @@ final _data = <r.Reflectable, r.ReflectorData>{
         r'name': (dynamic instance) => instance.name,
         r'setUp': (dynamic instance) => instance.setUp,
         r'testMethod': (dynamic instance) => instance.testMethod,
-        r'wasRun': (dynamic instance) => instance.wasRun,
-        r'log': (dynamic instance) => instance.log
+        r'logsAreEqual': (dynamic instance) => instance.logsAreEqual,
+        r'wasRun': (dynamic instance) => instance.wasRun
       },
       {
         r'name=': (dynamic instance, value) => instance.name = value,
-        r'wasRun=': (dynamic instance, value) => instance.wasRun = value,
-        r'log=': (dynamic instance, value) => instance.log = value
+        r'wasRun=': (dynamic instance, value) => instance.wasRun = value
       },
       null,
       [
         const [0, 0, null],
+        const [
+          0,
+          0,
+          const [#target]
+        ],
         const [1, 0, null],
         const [
           1,

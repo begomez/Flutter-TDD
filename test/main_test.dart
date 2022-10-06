@@ -22,13 +22,13 @@ void testMethodInvocation() {
 
   test.run();
 
-  assert(test.logContains(target: ["setUp", "run"]));
+  assert(test.logsAreEqual(target: ["setUp", "testMethod"]));
 }
 
 void testSetUp() {
   final test = WasRun("testMethod");
 
-  test.run();
+  test.setUp();
 
-  assert(test.logContains(target: "setUp"));
+  assert(test.logsAreEqual(target: ["setUp"]));
 }
