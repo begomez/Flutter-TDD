@@ -4,14 +4,14 @@ import 'package:junit/test_case.dart';
 @aCustomReflectable
 class WasRun extends TestCase {
   bool wasRun;
-  bool wasSetUp;
+  List<String> log = [];
 
-  WasRun(String name, {this.wasRun = false, this.wasSetUp = false}) : super(name);
+  WasRun(String name, {this.wasRun = false}) : super(name);
 
   @override
   void setUp() {
+    log.add("setUp");
     wasRun = false;
-    wasSetUp = true;
   }
 
   void testMethod() {

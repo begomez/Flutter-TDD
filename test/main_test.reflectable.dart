@@ -36,9 +36,8 @@ final _data = <r.Reflectable, r.ReflectorData>{
             {},
             {},
             {
-              r'': (bool b) => (name, {wasRun = false, wasSetUp = false}) => b
-                  ? prefix1.WasRun(name, wasRun: wasRun, wasSetUp: wasSetUp)
-                  : null
+              r'': (bool b) => (name, {wasRun = false}) =>
+                  b ? prefix1.WasRun(name, wasRun: wasRun) : null
             },
             -1,
             -1,
@@ -57,8 +56,8 @@ final _data = <r.Reflectable, r.ReflectorData>{
               r'testMethod': 0,
               r'wasRun': 0,
               r'wasRun=': 1,
-              r'wasSetUp': 0,
-              r'wasSetUp=': 1
+              r'log': 0,
+              r'log=': 1
             }),
         r.NonGenericClassMirrorImpl(
             r'TestCase',
@@ -103,12 +102,12 @@ final _data = <r.Reflectable, r.ReflectorData>{
         r'setUp': (dynamic instance) => instance.setUp,
         r'testMethod': (dynamic instance) => instance.testMethod,
         r'wasRun': (dynamic instance) => instance.wasRun,
-        r'wasSetUp': (dynamic instance) => instance.wasSetUp
+        r'log': (dynamic instance) => instance.log
       },
       {
         r'name=': (dynamic instance, value) => instance.name = value,
         r'wasRun=': (dynamic instance, value) => instance.wasRun = value,
-        r'wasSetUp=': (dynamic instance, value) => instance.wasSetUp = value
+        r'log=': (dynamic instance, value) => instance.log = value
       },
       null,
       [
@@ -117,7 +116,7 @@ final _data = <r.Reflectable, r.ReflectorData>{
         const [
           1,
           0,
-          const [#wasRun, #wasSetUp]
+          const [#wasRun]
         ]
       ])
 };
