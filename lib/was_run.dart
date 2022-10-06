@@ -7,4 +7,8 @@ class WasRun {
   void testMethod() {
     wasRun = true;
   }
+
+  void run() {
+    testMethod();
+  }
 }

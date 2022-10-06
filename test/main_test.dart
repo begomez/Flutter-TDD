@@ -7,7 +7,7 @@ void main() {
 
   print(test.wasRun);
 
-  test.testMethod();
+  test.run();
 
   print(test.wasRun);
 }
