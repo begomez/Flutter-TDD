@@ -12,6 +12,7 @@ void main() {
 
 void launchTests() {
   testMethodInvocation();
+  testSetUp();
 }
 
 void testMethodInvocation() {
@@ -22,4 +23,12 @@ void testMethodInvocation() {
   test.run();
 
   assert(test.wasRun);
+}
+
+void testSetUp() {
+  final test = WasRun("testMethod");
+
+  test.run();
+
+  assert(test.wasSetUp);
 }
