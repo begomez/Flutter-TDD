@@ -1,3 +1,5 @@
+import 'package:junit/was_run.dart';
+
 void main() {
   print("main()");
 
