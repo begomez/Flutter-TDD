@@ -21,7 +21,7 @@ void testMethodInvocation() {
 
   test.run();
 
-  assert(test.logsAreEqual(target: ["setUp", "testMethod"]));
+  assert(test.logsAreEqual(target: ["setUp", "testMethod", "tearDown"]));
 }
 
 void testSetUp() {
