@@ -32,5 +32,5 @@ void testSetUp() {
 
   test.run();
 
-  assert(test.wasSetUp);
+  assert(test.log.contains("setUp"));
 }
