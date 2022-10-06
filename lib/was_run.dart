@@ -3,20 +3,17 @@ import 'package:junit/test_case.dart';
 
 @aCustomReflectable
 class WasRun extends TestCase {
-  bool wasRun;
   final List<String> _log = [];
 
-  WasRun(String name, {this.wasRun = false}) : super(name);
+  WasRun(String name) : super(name);
 
   @override
   void setUp() {
     _log.add("setUp");
-    wasRun = false;
   }
 
   void testMethod() {
     _log.add("testMethod");
-    wasRun = true;
   }
 
   bool logsAreEqual({required List<String> target}) {

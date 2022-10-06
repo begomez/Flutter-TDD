@@ -18,8 +18,6 @@ void launchTests() {
 void testMethodInvocation() {
   final test = WasRun("testMethod");
 
-  assert(!test.wasRun);
-
   test.run();
 
   assert(test.logsAreEqual(target: ["setUp", "testMethod"]));
