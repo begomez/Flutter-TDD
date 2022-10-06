@@ -1,3 +1,7 @@
 class TestResult {
-  String summary() => "1 run, 0 failed";
+  int runCount;
+
+  TestResult({this.runCount = 1});
+
+  String summary() => "$runCount run, 0 failed";
 }
