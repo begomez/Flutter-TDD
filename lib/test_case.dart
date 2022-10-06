@@ -14,6 +14,8 @@ abstract class TestCase {
     var instanceMirror = aCustomReflectable.reflect(this);
 
     instanceMirror.invoke(name, []);
+
+    tearDown();
   }
 
   void tearDown();
