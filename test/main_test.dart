@@ -4,6 +4,10 @@ import 'package:junit/was_run.dart';
 
 import 'main_test.reflectable.dart';
 
+const setUpLabel = "setUp";
+const testMethodLabel = "testMethod";
+const tearDownLabel = "tearDown";
+
 void main() {
   initializeReflectable();
 
@@ -21,7 +25,7 @@ void testMethodInvocation() {
 
   test.run();
 
-  assert(test.logsAreEqual(target: ["setUp", "testMethod", "tearDown"]));
+  assert(test.logsAreEqual(target: [setUpLabel, testMethodLabel, tearDownLabel]));
 }
 
 void testSetUp() {
@@ -29,7 +33,7 @@ void testSetUp() {
 
   test.setUp();
 
-  assert(test.logsAreEqual(target: ["setUp"]));
+  assert(test.logsAreEqual(target: [setUpLabel]));
 }
 
 void testTearDown() {
@@ -37,5 +41,5 @@ void testTearDown() {
 
   test.tearDown();
 
-  assert(test.logsAreEqual(target: ["tearDown"]));
+  assert(test.logsAreEqual(target: [tearDownLabel]));
 }
