@@ -12,15 +12,21 @@ abstract class TestCase {
   TestResult run() {
     TestResult result = TestResult();
 
-    result.testStarted();
+    try {
+      result.testStarted();
 
-    setUp();
+      setUp();
 
-    var instanceMirror = aCustomReflectable.reflect(this);
+      var instanceMirror = aCustomReflectable.reflect(this);
 
-    instanceMirror.invoke(name, []);
+      instanceMirror.invoke(name, []);
 
-    tearDown();
+      tearDown();
+
+      return result;
+    } on Exception {
+      result.testFailed();
+    }
 
     return result;
   }
