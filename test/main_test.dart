@@ -7,6 +7,14 @@ import 'main_test.reflectable.dart';
 void main() {
   initializeReflectable();
 
+  launchTests();
+}
+
+void launchTests() {
+  testMethodInvocation();
+}
+
+void testMethodInvocation() {
   final test = WasRun("testMethod");
 
   assert(!test.wasRun);
