@@ -16,6 +16,10 @@ class WasRun extends TestCase {
     _log.add("testMethod");
   }
 
+  void tearDown() {
+    _log.add("tearDown");
+  }
+
   bool logsAreEqual({required List<String> target}) {
     assert(_log.length == target.length);
 
