@@ -26,7 +26,7 @@ void launchTests() {
 void testMethodInvocation() {
   final test = WasRun("testMethod");
 
-  test.run();
+  print(test.run());
 
   assert(test.logsAreEqual(target: [setUpLabel, testMethodLabel, tearDownLabel]));
 }
@@ -51,6 +51,7 @@ void testSummary() {
   final test = WasRun("testMethod");
 
   final result = test.run();
+  print(result);
 
   assert(result.summary() == "1 run, 0 failed");
 }

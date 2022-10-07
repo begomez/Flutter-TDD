@@ -9,4 +9,7 @@ class TestResult {
   void testStarted() => runCount++;
 
   void testFailed() => failureCount++;
+
+  @override
+  String toString() => summary();
 }
