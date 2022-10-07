@@ -1,10 +1,12 @@
 # junit
 
-Flutter sample app for a practical example of TDD.
+Flutter sample app to demo a practical example of TDD.
 
 ## Getting Started
 
-Goal is use TDD to create a small testing framework JUnit style. Idea is taken from 
+Goal is using TDD to create a small testing framework JUnit style. Notice the repeating sequence (RED, GREEN, REFACTOR) in the commit history. 
+
+Idea is taken from: 
 
 https://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530 
 
@@ -22,8 +24,12 @@ Contains the following classes:
 
 * TestResult: abstraction of test execution results
 
+* CustomReflectable: custom annotation required to apply reflection on other components
+
 ## Run program
 
 Pseudo "tests" can be run by running
 
 * test/main_test.dart
+
+Console shows a running summary and reports any assertions not meet
