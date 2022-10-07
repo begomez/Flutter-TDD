@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:junit/test_result.dart';
+import 'package:junit/test_suite.dart';
 import 'package:junit/was_run.dart';
 
 import 'main_test.reflectable.dart';
