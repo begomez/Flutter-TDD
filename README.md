@@ -1,16 +1,29 @@
 # junit
 
-A new Flutter project.
+Flutter sample app for a practical example of TDD.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Goal is use TDD to create a small testing framework JUnit style. Idea is taken from 
 
-A few resources to get you started if this is your first Flutter project:
+https://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530 
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+The app uses the dart mirrors package to invoke methods dynamically by using reflection (mirrors in Dart).
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## API
+
+Contains the following classes: 
+
+* TestCase: runner for a single test
+
+* TestSuite: runner for a suite of tests
+
+* WasRun: specialization of a test case that adds logging properties
+
+* TestResult: abstraction of test execution results
+
+## Run program
+
+Pseudo "tests" can be run by running
+
+* test/main_test.dart
