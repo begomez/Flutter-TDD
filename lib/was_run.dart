@@ -16,6 +16,12 @@ class WasRun extends TestCase {
     _log.add("testMethod");
   }
 
+  void testBrokenMethod() {
+    _log.add("testBrokenMethod");
+
+    throw Exception();
+  }
+
   @override
   void tearDown() {
     _log.add("tearDown");

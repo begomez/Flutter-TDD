@@ -9,8 +9,7 @@ abstract class TestCase {
 
   void setUp();
 
-  TestResult run() {
-    TestResult result = TestResult();
+  TestResult run(TestResult result) {
 
     try {
       result.testStarted();

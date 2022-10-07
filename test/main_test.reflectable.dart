@@ -46,11 +46,12 @@ final _data = <r.Reflectable, r.ReflectorData>{
               r'noSuchMethod': 2,
               r'hashCode': 0,
               r'runtimeType': 0,
-              r'run': 0,
+              r'run': 2,
               r'name': 0,
               r'name=': 2,
               r'setUp': 0,
               r'testMethod': 0,
+              r'testBrokenMethod': 0,
               r'tearDown': 0,
               r'logsAreEqual': 1
             }),
@@ -77,7 +78,7 @@ final _data = <r.Reflectable, r.ReflectorData>{
               r'noSuchMethod': 2,
               r'hashCode': 0,
               r'runtimeType': 0,
-              r'run': 0,
+              r'run': 2,
               r'name': 0,
               r'name=': 2
             })
@@ -96,6 +97,7 @@ final _data = <r.Reflectable, r.ReflectorData>{
         r'name': (dynamic instance) => instance.name,
         r'setUp': (dynamic instance) => instance.setUp,
         r'testMethod': (dynamic instance) => instance.testMethod,
+        r'testBrokenMethod': (dynamic instance) => instance.testBrokenMethod,
         r'tearDown': (dynamic instance) => instance.tearDown,
         r'logsAreEqual': (dynamic instance) => instance.logsAreEqual
       },
