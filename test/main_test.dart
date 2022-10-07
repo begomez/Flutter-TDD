@@ -23,6 +23,7 @@ void launchTests() {
   testSummary();
   testResult();
   testSuite();
+  testSuiteSummary();
 }
 
 void testMethodInvocation() {
@@ -74,4 +75,15 @@ void testSuite() {
   suite.add(WasRun("testBrokenMethod"));
 
   assert(suite.count() == 2);
+}
+
+void testSuiteSummary() {
+  final suite = TestSuite();
+
+  suite.add(WasRun("testMethod"));
+  suite.add(WasRun("testBrokenMethod"));
+
+  TestResult result = suite.run();
+
+  assert(result.summary() == "2 run, 1 failed");
 }
