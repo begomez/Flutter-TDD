@@ -20,8 +20,8 @@ void launchTests() {
   testMethodInvocation();
   testSetUp();
   testTearDown();
-  testSummary();
-  testResult();
+  testRunningTestResult();
+  testSingleSummary();
   testSuite();
   testSuiteSummary();
 }
@@ -50,7 +50,7 @@ void testTearDown() {
   assert(test.logsAreEqual(target: [tearDownLabel]));
 }
 
-void testSummary() {
+void testRunningTestResult() {
   final test = WasRun("testMethod");
 
   final result = test.run(TestResult());
@@ -59,7 +59,7 @@ void testSummary() {
   assert(result.summary() == "1 run, 0 failed");
 }
 
-void testResult() {
+void testSingleSummary() {
   final result = TestResult();
 
   result.testStarted();
